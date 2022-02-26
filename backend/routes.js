@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const Member = require('./models/members');
 
-// eine GET-Anfrage
-router.get('/', async(req, res) => {
-
-    res.send({ message: "Hello FIW!" });
+// get all members
+router.get('/members', async(req, res) => {
+    const allMembers = await Member.find();
+    console.log(allMembers);
+    res.send(allMembers);
 });
 
 module.exports = router;
