@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const schema = new mongoose.Schema({
     funktion: String,
     stunden: Number,
-    datum: Date,
+    datum: String,
     beginn: String,
     ende: String
 });

@@ -21,6 +21,11 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { MatMenuModule } from '@angular/material/menu';
     NavComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,11 @@ import { MatMenuModule } from '@angular/material/menu';
     MatCardModule,
     ReactiveFormsModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8">
+  <h3 class="m-3">Alle Einträge</h3>
+  <div class="table-responsive">
+    <table class="m-3 table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col ">ID</th>
+                <th scope="col ">Funktion</th>
+                <th scope="col ">Stunden</th>
+                <th scope="col ">Datum</th>
+                <th scope="col ">Beginn</th>
+                <th scope="col ">Ende</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dienst of dienste; let i=index; ">
+              <td>{{ i+1 }}</td>
+              <td>{{ dienst.funktion }}</td>
+              <td>{{ dienst.stunden }}</td>
+              <td>{{ dienst.datum }}</td>
+              <td>{{ dienst.beginn }}</td>
+              <td>{{ dienst.ende }}</td>
+            </tr>
+        </tbody>
+     </table>
+  </div>
+</div>
