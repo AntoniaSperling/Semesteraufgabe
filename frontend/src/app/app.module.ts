@@ -26,6 +26,13 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DetailComponent } from './detail/detail.component';
+import { CreateComponent } from './create/create.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ExistDialogComponent } from './register/exist-dialog/exist-dialog.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +41,10 @@ import { MatSortModule } from '@angular/material/sort';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    TableComponent
+    TableComponent,
+    DetailComponent,
+    CreateComponent,
+    ExistDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +66,7 @@ import { MatSortModule } from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
+    MatDialogModule,
     MatSortModule
   ],
   providers: [],

@@ -1,5 +1,12 @@
 <div class="mat-elevation-z8">
   <h3 class="m-3">Alle Einträge</h3>
+  <div class="row">
+    <div class="col"><h5>Eintrag hinzufügen</h5></div>
+    <div  class="col"><a [routerLink]="['/dienst']"> <span class="material-icons">
+      add_circle
+      </span></a>
+    </div>
+  </div>
   <div class="table-responsive">
     <table class="m-3 table table-striped table-hover">
         <thead>
@@ -10,6 +17,8 @@
                 <th scope="col ">Datum</th>
                 <th scope="col ">Beginn</th>
                 <th scope="col ">Ende</th>
+                <th scope="col ">Bearbeiten</th>
+                <th scope="col ">Löschen</th>
             </tr>
         </thead>
         <tbody>
@@ -18,10 +27,24 @@
               <td>{{ dienst.funktion }}</td>
               <td>{{ dienst.stunden }}</td>
               <td>{{ dienst.datum }}</td>
-              <td>{{ dienst.beginn }}</td>
-              <td>{{ dienst.ende }}</td>
+              <td>{{ dienst.beginn  + " Uhr"}}</td>
+              <td>{{ dienst.ende  + " Uhr"}}</td>
+              <td>
+                <a [routerLink]="['/dienst', dienst._id]"> <span class="material-icons">
+                  edit
+                  </span></a>
+              </td>
+              <td>
+                <span (click)="delete(dienst._id)" class="material-icons">
+                delete
+                </span>
+              </td>
             </tr>
         </tbody>
      </table>
   </div>
 </div>
+<div *ngIf="deleted" class=" container mt-3 ">
+  <h3>Datensatz wurde gelöscht!</h3>
+  <button type="button" class="btn btn-secondary" (click)="reload(false)">Zurück zur Tabelle</button>
+</div>   

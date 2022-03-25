@@ -1,0 +1,34 @@
+<main class="d-flex min-vh-100">
+    <fieldset class="container  mt-5">
+        <h2>Neuen Eintrtag erstellen</h2>
+        <form [formGroup]="form" (ngSubmit)="create()">
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="funktion">Funktion</label>
+                <input type="text" class="col-10 form-control" id="funktion" placeholder="Funktion" formControlName="funktionControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="stunden">Stunden</label>
+                <input type="text" class="col-10 form-control" id="stunden" placeholder="Stunden" formControlName="stundenControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="datum">Datum</label>
+                <input type="email" class="col-10 form-control" id="datum" placeholder="Datum" formControlName="datumControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="beginn">Beginn</label>
+                <input type="email" class="col-10 form-control" id="beginn" placeholder="Beginn" formControlName="beginnControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="ende">Ende</label>
+                <input type="email" class="col-10 form-control" id="ende" placeholder="Ende" formControlName="endeControl">
+            </div>
+            <div class="form-group row  justify-content-end">
+                <button mat-raised-button color="primary" type="submit">Erstellen</button>
+                <div class="col-2"></div>
+                <button mat-raised-button color="primary" type="button" (click)="cancel() ">Abbrechen</button>
+            </div>
+        </form>
+    </fieldset>
+</main>
+
+
