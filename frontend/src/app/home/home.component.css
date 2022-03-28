@@ -8,14 +8,17 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  background-color: rgb(99, 107, 180);
 }
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
 .dashboard-card-content {
   text-align: center;
+  padding-top: 5%;
+}
+
+h3 {
+  font-variant: inherit;
+  color: rgb(253, 252, 252);
+}
+mat-card-title {
+  color: rgb(253, 252, 252);
 }

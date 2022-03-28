@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { BackendService } from '../shared/backend.service';
 import { Dienst } from '../shared/dienst';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-table',
@@ -21,6 +22,7 @@ export class TableComponent implements AfterViewInit {
 
   dienste!: Dienst[];
   deleted = false;
+  dataSource!: MatTableDataSource<Dienst>;
 
   constructor(private bs: BackendService, private router: Router) {  }
 
@@ -34,6 +36,9 @@ export class TableComponent implements AfterViewInit {
     (
       response: Dienst[]) => {
               this.dienste = response;
+              this.dataSource = new MatTableDataSource(this.dienste);
+              this.dataSource.sort = this.sort;
+              this.dataSource.paginator = this.paginator;
               console.log(this.dienste);
               return this.dienste;
       },
@@ -65,4 +70,5 @@ export class TableComponent implements AfterViewInit {
     this.readAll();
     this.router.navigateByUrl('/table');
   }
+
 }

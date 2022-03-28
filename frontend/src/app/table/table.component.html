@@ -1,13 +1,13 @@
 <div class="mat-elevation-z8">
-  <h3 class="m-3">Alle Einträge</h3>
-  <div class="row">
-    <div class="col"><h5>Eintrag hinzufügen</h5></div>
-    <div  class="col"><a [routerLink]="['/dienst']"> <span class="material-icons">
-      add_circle
-      </span></a>
-    </div>
-  </div>
+  <h2 class="m-3">Alle Einträge</h2>
   <div class="table-responsive">
+    <div class="row">
+      <div class="col"><h4>Eintrag hinzufügen</h4></div>
+      <div  class="col"><a [routerLink]="['/dienst']"> <button mat-mini-fab color="primary">
+        <mat-icon>add</mat-icon>
+      </button></a>
+      </div>
+    </div>
     <table class="m-3 table table-striped table-hover">
         <thead>
             <tr>
@@ -30,14 +30,15 @@
               <td>{{ dienst.beginn  + " Uhr"}}</td>
               <td>{{ dienst.ende  + " Uhr"}}</td>
               <td>
-                <a [routerLink]="['/dienst', dienst._id]"> <span class="material-icons">
-                  edit
-                  </span></a>
+                  <a [routerLink]="['/dienst', dienst._id]">
+                    <button mat-mini-fab color="primary">
+                      <mat-icon>edit</mat-icon>
+                    </button></a>
               </td>
               <td>
-                <span (click)="delete(dienst._id)" class="material-icons">
-                delete
-                </span>
+                <button (click)="delete(dienst._id)" mat-mini-fab color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </td>
             </tr>
         </tbody>

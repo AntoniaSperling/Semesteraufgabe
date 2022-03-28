@@ -40,4 +40,8 @@ export class BackendService {
   checkIfExist(email: string): Observable<User>{
     return this.http.get<User>(this.userRoute + '/' + email);
   }
+
+  loginUser(email: string, password: string): Observable<any>{
+    return this.http.post<User>(this.userRoute+ '/login/' + email, { password: password });
+  }
 }

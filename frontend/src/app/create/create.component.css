@@ -1,0 +1,19 @@
+legend {
+    font-weight: bold;
+}
+.col-3 {
+    float: left;
+    margin-right: 3.33333%;
+    padding: 20px;
+    font-weight: bold;
+}
+label {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.col-10 {
+    padding: 3px;
+}
+.form-group {
+    padding-top: 1.5%;
+}

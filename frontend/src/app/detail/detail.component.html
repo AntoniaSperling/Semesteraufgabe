@@ -18,16 +18,19 @@
             </div>
             <div class="form-group row">
                 <label class="col-2 col-form-label" for="beginn">Beginn</label>
-                <input type="email" class="col-10 form-control" id="beginn" placeholder="Beginn" formControlName="beginnControl">
+                <input type="text" class="col-10 form-control" id="beginn" placeholder="Beginn" formControlName="beginnControl">
             </div>
             <div class="form-group row">
                 <label class="col-2 col-form-label" for="ende">Ende</label>
-                <input type="email" class="col-10 form-control" id="ende" placeholder="Ende" formControlName="endeControl">
+                <input type="text" class="col-10 form-control" id="ende" placeholder="Ende" formControlName="endeControl">
             </div>
             <div class="form-group row  justify-content-end">
-                <button mat-raised-button color="primary" type="submit">Aktualisieren</button>
-                <div class="col-2"></div>
-                <button mat-raised-button color="primary" type="button" (click)="cancel() ">Abbrechen</button>
+                <div class="col-3">
+                    <button mat-raised-button color="primary" type="submit">Aktualisieren</button>
+                </div>
+                <div class="col-3">
+                    <button mat-raised-button color="primary" type="button" (click)="cancel() ">Abbrechen</button>
+                </div>
             </div>
         </form>
     </fieldset>

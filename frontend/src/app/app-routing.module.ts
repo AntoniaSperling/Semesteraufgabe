@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { DetailComponent } from './detail/detail.component';
+import { AuthguardGuard } from './guards/authguard.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -13,7 +14,8 @@ const routes: Routes = [{
 },
 {
   path: 'table',
-  component: TableComponent
+  component: TableComponent,
+  canActivate: [AuthguardGuard]
 },
 {
   path: "dienst/:id",

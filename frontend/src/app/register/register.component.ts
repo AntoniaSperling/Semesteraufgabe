@@ -4,6 +4,7 @@ import { AbstractControl, FormBuilder, ValidationErrors, ValidatorFn, Validators
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { BackendService } from '../shared/backend.service';
 import { User } from '../shared/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -39,11 +40,12 @@ export class RegisterComponent {
     {name: 'User', abbreviation: 'user'}
   ];
 
-  constructor(private fb: FormBuilder, private bs: BackendService, private dialog: MatDialog) {}
+  constructor(private fb: FormBuilder, private bs: BackendService, private dialog: MatDialog,  private router: Router) {}
 
   onSubmit(): void {
     const values = this.registerForm.value;
     console.log(values);
+    alert('Registrierung erfolgreich!');
     this.user = {
       firstname: values.firstName,
       lastname: values.lastName,
@@ -57,10 +59,11 @@ export class RegisterComponent {
         response => {
           console.log(response);
           console.log(response.password);
+          this.router.navigateByUrl('/login');
         },
         error => {
           console.log(error);
-        })
+        });
   }
 
   openDialog() {
