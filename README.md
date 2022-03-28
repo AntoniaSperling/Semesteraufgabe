@@ -8,6 +8,8 @@ Nachdem du dich eingeloggt hast, kannst du auf die Dienstübersicht zugreifen.
 Dort werden dir alle eingetragenen Dienste angezeigt. Du kannst Dienste hinzufügen und löschen. 
 Sollte sich etwas an deinem Plan ändern ist es auch kein Problem, denn du kannst die Dienste auch ganz leicht bearbeiten.
 
+![image](https://user-images.githubusercontent.com/82514219/160459267-8ffaa7f7-7781-40f4-935d-5d156537cd74.png)
+
 
 ## Installation
 
